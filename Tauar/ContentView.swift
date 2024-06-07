@@ -9,13 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                NavigationLink("Молочные продукты") {
+                    Text("Молочные продукты")
+                }
+                
+                NavigationLink("Хлеб и выпечка") {
+                    Text("Хлеб и выпечка")
+                }
+                
+                NavigationLink("Мясные продукты") {
+                    Text("Мясные продукты")
+                }
+            }
+            .navigationTitle("Категории")
         }
-        .padding()
     }
 }
 
